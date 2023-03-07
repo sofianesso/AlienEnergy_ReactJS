@@ -1,3 +1,4 @@
+import Bottles from '../../../images/allflavs.png'
 export const homeObjOne = {
     lightBg: false,
     lightText: true,
@@ -7,8 +8,8 @@ export const homeObjOne = {
     description: 'Be among the first to try our new flavor RED MARSIAN CHERRY, which consists of tasty cherries hand-picked from the trees in Mars. The launch date is 15/03',
     buttonLabel: 'Get started',
     imgStart: '',
-    img: '/images/allflavs.png',
-    alt: 'Bottles'
+    img: Bottles,
+    alt: 'Bottles'  
 };
 
 export const homeObjTwo = {

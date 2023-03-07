@@ -9,6 +9,9 @@
     outline: none;
     cursor: pointer;
     white-space: nowrap;
+    font-family: "normalidad-wide", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .btn--primary {

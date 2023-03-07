@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import { MdFingerprint } from 'react-icons/md';
+import { RiAliensFill } from 'react-icons/ri';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 
@@ -28,14 +28,13 @@ function Navbar() {
       window.removeEventListener('resize', showButton);
     };
   }, []);
-
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
         <nav className='navbar'>
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              <MdFingerprint className='navbar-icon' />
+              <RiAliensFill className='navbar-icon' />
               ALIEN
             </Link>
             <div className='menu-icon' onClick={handleClick}>
