@@ -1,5 +1,8 @@
+@import url("https://use.typekit.net/blj1ljn.css");
+
+
 .navbar {
-    background: #1c2237;
+    background: rgba(0, 0, 0, 0.1);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -26,6 +29,7 @@
     padding-left: 50px;
   }
   
+  /** Navbar logo **/
   .navbar-logo {
     color: #fff;
     justify-self: start;
@@ -36,10 +40,12 @@
     align-items: center;
   }
   
- /* .navbar-icon {
+  /** Icon for the nav-bar **/
+  .navbar-icon {
     margin-right: 0.5rem;
-  } */
+  } 
   
+  /** The Menu structure **/ 
   .nav-menu {
     display: flex;
     align-items: center;
@@ -50,15 +56,18 @@
     
   }
   
+  /** Line under the Menu-links **/
   .nav-item {
     height: 80px;
     border-bottom: 2px solid transparent;
   }
   
+  /** Hover effect over the links **/
   .nav-item:hover {
     border-bottom: 2px solid #f00946;
   }
   
+  /** Menu-links (Home, Products, About and Contact) **/
   .nav-links {
     color: #fff;
     display: flex;
@@ -66,6 +75,11 @@
     text-decoration: none;
     padding: 0.5rem 1rem;
     height: 100%;
+    font-family: "normalidad-wide", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 15px;
   }
   
   .fa-bars {
