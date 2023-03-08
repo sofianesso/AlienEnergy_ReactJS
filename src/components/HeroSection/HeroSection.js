@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../Button";
+import { Button } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 import "./HeroSection.css";
 
@@ -52,7 +52,7 @@ function HeroSection({
             </div>
             <div className="col">
               <div className="home__hero-img-wrapper">
-                <img src={"/images/allflavs.png"} alt={alt} className="home__hero-img" />
+                <img src={""} alt={alt} className="home__hero-img" />
               </div>
             </div>
           </div>

@@ -2,7 +2,8 @@
 
 
 .navbar {
-    background: rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border: 1px solid rgb(200, 200, 200);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -31,7 +32,7 @@
   
   /** Navbar logo aka the ALIEN text **/
   .navbar-logo {
-    color: #fff;
+    color: black;
     justify-self: start;
     cursor: pointer;
     text-decoration: none;
@@ -41,13 +42,14 @@
     font-family: "normalidad-extended", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-top: 1%;
+    margin-bottom:  5%;
   }
   
   /** Icon for the nav-bar **/
   .navbar-icon {
     margin-right: 0.5rem;
     margin-bottom: 6%;
+    
     
   } 
   
@@ -70,12 +72,12 @@
   
   /** Hover effect over the links **/
   .nav-item:hover {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid black;
   }
   
   /** Menu-links (Home, Products, About and Contact) **/
   .nav-links {
-    color: #fff;
+    color: black;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -89,11 +91,12 @@
   }
   
   .fa-bars {
-    color: #fff;
+    color: black;
   }
   
   .menu-icon {
     display: none;
+    color: black;
   }
   
   @media screen and (max-width: 960px) {
@@ -112,9 +115,10 @@
       opacity: 1;
       transition: all 0.5s ease;
     }
-  
+
+    /** Mobil versionen som poppar upp när skärmen är för liten.*/
     .nav-menu.active {
-      background: #1c2237;
+      background: white;
       left: 0;
       opacity: 1;
       transition: all 0.6s ease;
@@ -129,7 +133,7 @@
     }
   
     .nav-links:hover {
-      color: #f00946;
+      color: black;
       transform: scale(1.2);
       transition: all 0.3s ease;
     }
@@ -160,7 +164,7 @@
     }
   
     .fa-times {
-      color: #fff;
+      color: black;
       font-size: 2rem;
     }
   

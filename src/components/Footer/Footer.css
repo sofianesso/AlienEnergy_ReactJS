@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/blj1ljn.css");
+
 .footer-container {
     background-color: #1c2237;
     padding: 4rem 0 2rem 0;
@@ -16,6 +18,11 @@
     margin-bottom: 24px;
     padding: 24px;
     color: #fff;
+  
+  }
+
+  .footer-logo {
+    font-family: "normalidad-extended", sans-serif;
   }
   
   .footer-subscription > p {
@@ -49,6 +56,7 @@
     max-width: 1000px;
     display: flex;
     justify-content: center;
+    
   }
   
   .footer-link-wrapper {
@@ -67,6 +75,7 @@
   
   .footer-link-items h2 {
     margin-bottom: 16px;
+    
   }
   
   .footer-link-items > h2 {

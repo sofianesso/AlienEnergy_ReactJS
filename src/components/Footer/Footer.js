@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from '../../Button';
+import { Button } from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import {
   FaFacebook,
@@ -9,7 +9,7 @@ import {
   FaTwitter,
   FaLinkedin
 } from 'react-icons/fa';
-import { MdFingerprint } from 'react-icons/md';
+import { RiAliensFill } from 'react-icons/ri';
 
 function Footer() {
   return (
@@ -37,34 +37,34 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='/sign-up'></Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
           </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
+            <Link to='/'></Link>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@ function Footer() {
         <div className='social-media-wrap'>
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
-              <MdFingerprint className='navbar-icon' />
+              <RiAliensFill className='navbar-icon' />
               ALIEN
             </Link>
           </div>
@@ -97,7 +97,7 @@ function Footer() {
             <Link
               className='social-icon-link'
               to={
-                '//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber'
+                ''
               }
               target='_blank'
               aria-label='Youtube'
