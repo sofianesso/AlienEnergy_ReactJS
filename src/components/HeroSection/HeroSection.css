@@ -39,7 +39,7 @@
   /** Line above the heading **/
 
   .top-line {
-    color: #f00946;
+    color: #4682B4;
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
@@ -49,7 +49,6 @@
   }
   
   /** The heading of Homepage **/
-
   .heading {
     margin-bottom: 24px;
     font-size: 48px;

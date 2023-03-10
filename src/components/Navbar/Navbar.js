@@ -28,9 +28,11 @@ function Navbar() {
       window.removeEventListener('resize', showButton);
     };
   }, []);
+
+
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ color: '#000000' }}> 
         <nav className='navbar'>
           <div className='navbar-container container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
@@ -46,15 +48,17 @@ function Navbar() {
                   Home
                 </Link>
               </li>
+
               <li className='nav-item'>
                 <Link
-                  to='/services'
+                  to='/products'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
                   Products
                 </Link>
               </li>
+
               <li className='nav-item'>
                 <Link
                   to='/products'
@@ -74,8 +78,6 @@ function Navbar() {
                   Contact
                 </Link>
               </li>
-
-
 
 
               <li className='nav-btn'>

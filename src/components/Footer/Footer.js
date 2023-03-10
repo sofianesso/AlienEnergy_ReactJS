@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { Button } from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
+import { RiAliensFill } from 'react-icons/ri';
 import {
   FaFacebook,
   FaInstagram,
@@ -9,7 +10,7 @@ import {
   FaTwitter,
   FaLinkedin
 } from 'react-icons/fa';
-import { RiAliensFill } from 'react-icons/ri';
+
 
 function Footer() {
   return (
@@ -29,7 +30,7 @@ function Footer() {
               type='email'
               placeholder='Your Email'
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <Button buttonStyle='btn--primary'>Subscribe</Button>
           </form>
         </div>
       </section>
