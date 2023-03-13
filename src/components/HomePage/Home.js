@@ -8,7 +8,6 @@ function Home() {
         <>
         <HeroSection {...homeObjOne} />
         <Products/>
-
         <HeroSection {...homeObjTwo} />
 
 
