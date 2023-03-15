@@ -1,4 +1,4 @@
-export const homeObjTwo = {
+export const homeObjOne = {
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
@@ -11,3 +11,4 @@ export const homeObjTwo = {
     img: 'images/svg-4.svg',
     alt: 'Credit Card'
   };
+

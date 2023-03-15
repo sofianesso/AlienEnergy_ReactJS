@@ -1,14 +1,14 @@
 import React from 'react';
 import HeroSection from '../HeroSection/HeroSection';
-import { homeObjOne} from './Data';
+import { homeObjFour, } from './Data';
 
-function Products() {
+function Contact() {
   return (
     <>
-      <HeroSection {...homeObjOne} />
       
+      <HeroSection {...homeObjFour} />
     </>
   );
 }
 
-export default Products;
+export default Contact;
