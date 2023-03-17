@@ -92,6 +92,7 @@
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
+    
   }
   
   @media screen and (max-width: 991px) {
@@ -110,4 +111,6 @@
       max-width: 100%;
       flex-basis: 100%;
     }
+
+    
   }

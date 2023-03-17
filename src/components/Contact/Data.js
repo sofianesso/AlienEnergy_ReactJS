@@ -1,4 +1,8 @@
+
+/*
 export const homeObjFour = {
+
+  
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
@@ -11,3 +15,4 @@ export const homeObjFour = {
     img: 'images/svg-7.svg',
     alt: 'Vault'
   };
+  */
