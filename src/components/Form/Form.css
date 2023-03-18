@@ -4,7 +4,7 @@
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 10px;
-    height: 600px;
+    height: 700px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -22,19 +22,19 @@
   .form-content-left {
     background: linear-gradient(
       90deg,
-      rgb(39, 176, 255) 0%,
-      rgb(0, 232, 236) 100%
+      rgb(255, 255, 255) 0%,
+      rgb(235, 235, 235) 100%
     );
     border-radius: 10px 0 0 10px;
     position: relative;
   }
   
   .form-img {
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 60%;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
   }
   
@@ -79,17 +79,21 @@
     width: 80%;
     margin-bottom: 1rem;
     color: #fff;
+    font-family: 'normalidad-wide', sans-serif;
+    font-weight: 400;
   }
   
   .form-inputs {
     margin-bottom: 0.5rem;
     width: 80%;
+    font-family: 'normalidad-wide', sans-serif;
   }
   
   .form-inputs p {
     font-size: 0.8rem;
     margin-top: 0.5rem;
-    color: #f00e0e;
+    color: white;
+    font-family: 'normalidad-wide', sans-serif;
   }
   
   .form-label {
@@ -97,6 +101,7 @@
     font-size: 0.8rem;
     margin-bottom: 6px;
     color: #fff;
+    font-family: 'normalidad-wide', sans-serif;
   }
   
   .form-input {
@@ -119,24 +124,18 @@
     height: 50px;
     margin-top: 10px;
     border-radius: 2px;
-    background: linear-gradient(
-      90deg,
-      rgb(39, 176, 255) 0%,
-      rgb(0, 232, 236) 100%
-    );
-    outline: none;
+    background: white;
+    outline: 1px solid black;
     border: none;
-    color: #fff;
+    color: black;
     font-size: 1rem;
+    font-family: 'normalidad-wide', sans-serif;
+    font-weight: 500;
   }
   
   .form-input-btn:hover {
     cursor: pointer;
-    background: linear-gradient(
-      90deg,
-      rgb(39, 143, 255) 0%,
-      rgb(12, 99, 250) 100%
-    );
+    background: rgb(192, 192, 192);
     transition: all 0.4s ease-out;
   }
   
@@ -150,7 +149,8 @@
   
   .form-input-login a {
     text-decoration: none;
-    color: #27cdff;
+    color: #bababa;
+    font-family: 'normalidad-wide', sans-serif;
     font-weight: 600;
   }
 

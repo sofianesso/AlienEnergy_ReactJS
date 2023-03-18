@@ -13,8 +13,8 @@ const FormSignup = ({ submitForm }) => {
     <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
         <h1>
-          Get started with us today! Create your account by filling out the
-          information below.
+          Get started with us today and get 10% discount!
+          
         </h1>
         <div className='form-inputs'>
           <label className='form-label'>Username</label>
@@ -65,7 +65,7 @@ const FormSignup = ({ submitForm }) => {
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
         <button className='form-input-btn' type='submit'>
-          Sign up
+          SIGN UP
         </button>
         <span className='form-input-login'>
           Already have an account? Login <a href='#'>here</a>
