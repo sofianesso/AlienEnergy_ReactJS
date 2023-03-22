@@ -1,4 +1,4 @@
-export const homeObjFive = {
+export const homeObjOne = {
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
@@ -11,9 +11,7 @@ export const homeObjFive = {
     alt: 'Proteinbars'  
 }
 
-
-
-export const homeObjOne = {
+export const homeObjTwo = {
     lightBg: true,
     lightText: false,
     lightTextDesc: false,

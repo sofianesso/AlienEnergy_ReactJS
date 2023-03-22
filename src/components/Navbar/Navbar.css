@@ -12,10 +12,10 @@
     z-index: 999;
   }
 
-  .nav-links:hover {
-    color: black;
+  a:-webkit-any-link {
     text-decoration: none;
-}
+    color: inherit;
+  }
   
   .navbar-container {
     display: flex;
@@ -32,8 +32,7 @@
     padding-right: 50px;
     padding-left: 50px;
   }
-  
-  /** Navbar logo aka the ALIEN text **/
+
   .navbar-logo {
     color: black;
     justify-self: start;
@@ -48,15 +47,10 @@
     margin-bottom:  2%;
   }
   
-  /** Icon for the nav-bar **/
   .navbar-icon {
     margin-right: 0.5rem;
-
-    
-    
   } 
   
-  /** The Menu structure **/ 
   .nav-menu {
     display: flex;
     align-items: center;
@@ -67,17 +61,14 @@
     
   }
   
-  /** Line under the Menu-links **/
-  
   .nav-item {
     height: 80px;
     border-bottom: 2px solid transparent;
   }
 
   
-  /** Menu-links (Home, Products, About and Contact) **/
   .nav-links {
-    color: black;
+    color: black !important;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -88,8 +79,8 @@
     font-style: normal;
     text-transform: uppercase;
     font-size: 15px;
+    
   }
-
 
   .fa-bars {
     color: black;
@@ -109,7 +100,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 90vh;
+      height: 60vh;
       position: absolute;
       top: 80px;
       left: -100%;
@@ -120,15 +111,16 @@
     /** Mobil versionen som poppar upp när skärmen är för liten.*/
     .nav-menu.active {
       background: white;
-      left: 0;
+      left: -1%;
       opacity: 1;
       transition: all 0.6s ease;
       z-index: 1;
+      bottom: 10%;
     }
   
     .nav-links {
       text-align: center;
-      padding: 2rem;
+      padding: 0.2rem 1rem;
       width: 100%;
       display: table;
     }
@@ -176,10 +168,4 @@
       width: 60%;
      
     }
-
-  
-
-  
-
-
   }

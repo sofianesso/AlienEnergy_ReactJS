@@ -1,16 +1,17 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAvk9Z8vx7J50ksC49vs7WI-0Wp4cVK8QQ",
-  authDomain: "aliendrink.firebaseapp.com",
-  databaseURL: "https://aliendrink-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "aliendrink",
-  storageBucket: "aliendrink.appspot.com",
-  messagingSenderId: "645359974428",
-  appId: "1:645359974428:web:e29a10862a8278230207d9"
+  apiKey: "AIzaSyCHoZJDyL4meLVrt6soO6Y2DlnFmQ8bWRM",
+  authDomain: "alienauth.firebaseapp.com",
+  projectId: "alienauth",
+  storageBucket: "alienauth.appspot.com",
+  messagingSenderId: "748022367777",
+  appId: "1:748022367777:web:f0ee48dbeec8b9cfe60560"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-export { app };
+export const auth = getAuth(app);

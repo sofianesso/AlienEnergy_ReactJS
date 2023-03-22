@@ -31,14 +31,6 @@
     transition: all 0.3s ease-out;
     }
 
-    .btn--speziale {
-        background-color: transparent;
-        color: white;
-        padding: 8px 20px;
-        border: 1px solid white ;
-        transition: all 0.3s ease-out;
-        }
-        
     
     /* Define styles for medium-sized button */
     .btn--medium {
