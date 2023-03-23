@@ -1,14 +1,11 @@
-import React from 'react';
-import HeroSection from '../HeroSection/HeroSection';
-import { homeObjFour, } from './Data';
+import ContactForm from "../ContactForm/ContactForm";
 
 function Contact() {
-  return (
-    <>
-      
-      <HeroSection {...homeObjFour} />
-    </>
-  );
-}
-
-export default Contact;
+    return (
+      <>
+        <ContactForm/>
+      </>
+    );
+  }
+  
+  export default Contact;
