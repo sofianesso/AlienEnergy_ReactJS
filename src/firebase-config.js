@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: "alienauth.appspot.com",
   messagingSenderId: "748022367777",
   appId: "1:748022367777:web:f0ee48dbeec8b9cfe60560"
-};
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

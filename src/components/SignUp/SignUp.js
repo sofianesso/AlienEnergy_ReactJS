@@ -6,7 +6,7 @@ import {
   signOut,
 } from "firebase/auth";
 import "./SignUp.css";
-import { Button}  from '../Button/Button'
+import { Button } from "../Button/Button";
 import { auth } from "../../firebase-config";
 
 function SignUp() {
@@ -18,10 +18,9 @@ function SignUp() {
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
-        setUser(currentUser);
+      setUser(currentUser);
     });
-
-}, [])
+  }, []);
 
   const register = async () => {
     try {
@@ -54,48 +53,77 @@ function SignUp() {
   };
 
   return (
-    <div className="App">
-      <div>
-        <h3> Register User </h3>
-        <input
-          placeholder="Email..."
-          onChange={(event) => {
-            setRegisterEmail(event.target.value);
-          }}
-        />
-        <input
-          placeholder="Password..."
-          onChange={(event) => {
-            setRegisterPassword(event.target.value);
-          }}
-        />
+    <div className="signup-background">
+      <div className="signup-container">
+        <div className="signup-form register">
+          <h3>Register User</h3>
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+              onChange={(event) => {
+                setRegisterEmail(event.target.value);
+              }}
+            />
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Enter password"
+              onChange={(event) => {
+                setRegisterPassword(event.target.value);
+              }}
+            />
+          </div>
 
-        <button onClick={register}> Create User</button>
+          <Button buttonStyle="btn--primary" onClick={register}>
+            Create User
+          </Button>
+        </div>
+
+        <div className="signup-form login">
+          <h3>Login</h3>
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+              onChange={(event) => {
+                setLoginEmail(event.target.value);
+              }}
+            />
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Enter password"
+              onChange={(event) => {
+                setLoginPassword(event.target.value);
+              }}
+            />
+          </div>
+
+          <Button buttonStyle="btn--outline" onClick={login}>
+            Login
+          </Button>
+        </div>
       </div>
-
-      <div>
-        <h3> Login </h3>
-        <input
-          placeholder="Email..."
-          onChange={(event) => {
-            setLoginEmail(event.target.value);
-          }}
-        />
-        <input
-          placeholder="Password..."
-          onChange={(event) => {
-            setLoginPassword(event.target.value);
-          }}
-        />
-
-        <Button buttonStyle='btn--outline'
-        onClick={login}>Login</Button>
-      </div>
-
-      <h4> User Logged In: </h4>
-      {user?.email}
-
-      <button onClick={logout}> Sign Out </button>
+      {user ? (
+        <div className="logout-container">
+          <h4>User Logged In:</h4>
+          <p>{user.email}</p>
+          <Button buttonStyle="btn--outline" onClick={logout}>
+            Sign Out
+          </Button>
+        </div>
+      ) : null}
     </div>
   );
 }

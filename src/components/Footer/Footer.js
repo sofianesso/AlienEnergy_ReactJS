@@ -46,7 +46,7 @@ function Footer() {
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'></Link>
+            <Link to='/about'></Link>
             <Link to='/'></Link>
             <Link to='/'></Link>
             <Link to='/'></Link>
