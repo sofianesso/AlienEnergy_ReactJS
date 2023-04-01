@@ -86,7 +86,7 @@ function SignUp() {
         </div>
 
         <div className="signup-form login">
-          <h3>Login</h3>
+          <h3>LOGIN</h3>
           <div className="form-group">
             <label>Email</label>
             <input

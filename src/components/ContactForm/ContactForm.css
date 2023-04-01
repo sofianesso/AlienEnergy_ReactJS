@@ -14,12 +14,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 400px;
-  padding: 10px;
+  max-width: 420px;
+  padding: 20px;
   background-color: white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
   outline: 1px solid grey;
-  margin-bottom: 6%;
+  margin-top: 1%;
   border-radius: 3px;
 }
 
@@ -32,6 +32,8 @@
   margin-top: 10px;
   color: black;
   text-transform: uppercase;
+  font-family: normalidad-compact, sans-serif;
+  font-size: 1.5rem;
 }
 
 .contact-form input,
@@ -41,7 +43,7 @@
   margin-top: 5px;
   border-radius: 2px;
   border: none;
-  background-color: white; /* same color as signup form */
+  background-color: white;
   font-size: 16px;
   resize: none;
   outline: 1px solid black;
@@ -52,8 +54,8 @@
 }
 
 .contact-form .btn--primary {
-  background-color: #0b0e17; /* same color as signup form */
-  color: #fff; /* same color as signup form */
+  background-color: #0b0e17;
+  color: #fff; 
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -62,7 +64,8 @@
 }
 
 .contact-form .btn--primary:hover {
-  background-color: #fff; /* same color as signup form */
-  color: #0b0e17; /* same color as signup form */
+  background-color: #fff; 
+  color: #0b0e17;
   transition: all 0.3s ease-in-out;
+  outline: 1px solid black;
 }

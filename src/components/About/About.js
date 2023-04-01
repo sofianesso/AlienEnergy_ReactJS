@@ -5,7 +5,6 @@ import { homeObjThree, } from './Data';
 function About() {
   return (
     <>
-      
       <HeroSection {...homeObjThree} />
     </>
   );
