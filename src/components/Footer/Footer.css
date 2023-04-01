@@ -24,11 +24,7 @@
   .footer-logo {
     font-family: "normalidad-extended", sans-serif;
   }
-  
-  .footer-subscription > p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif;
-  }
+
   
   .footer-subscription-heading {
     margin-bottom: 24px;
@@ -61,6 +57,7 @@
   
   .footer-link-wrapper {
     display: flex;
+    
   }
   
   .footer-link-items {
@@ -101,7 +98,6 @@
     color: #b1b1b1;
   }
   
-  /* Social Icons */
   .social-icon-link {
     color: #fff;
     font-size: 24px;

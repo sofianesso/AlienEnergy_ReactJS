@@ -12,7 +12,7 @@ function Countdown() {
 
     if (count === 0) {
       clearInterval(interval);
-      history.push('/'); // Replace with your target page
+      history.push('/');
     }
 
     return () => clearInterval(interval);

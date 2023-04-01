@@ -81,7 +81,7 @@ function SignUp() {
           </div>
 
           <Button buttonStyle="btn--primary" onClick={register}>
-            Create User
+            CREATE USER
           </Button>
         </div>
 
@@ -111,7 +111,7 @@ function SignUp() {
           </div>
 
           <Button buttonStyle="btn--outline" onClick={login}>
-            Login
+            LOGIN
           </Button>
         </div>
       </div>
@@ -120,7 +120,7 @@ function SignUp() {
           <h4>User Logged In:</h4>
           <p>{user.email}</p>
           <Button buttonStyle="btn--outline" onClick={logout}>
-            Sign Out
+            SIGN OUT
           </Button>
         </div>
       ) : null}
