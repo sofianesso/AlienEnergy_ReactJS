@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'alienenergy'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8B307B2F9D174988A0A74462036C2A89 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_87857644FE5743E6A4F3842F50C517C9 }}
           package: .
