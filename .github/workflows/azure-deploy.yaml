@@ -32,12 +32,12 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1
         with:
-          name: ${{ secrets.AZURE_NAME }}
-          password: ${{ secrets.AZURE_PWD }}
+          name: ${{ secrets.AZURE_USER }}
+          password: ${{ secrets.AZURE_USER_PWD }}
 
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
         with:
           app-name: <alienenergy>
-          publish-profile: ${{ secrets.AZURE_URL }}
+          publish-profile: ${{ secrets.AZURE_PUBLISHPROFILE }}
           package: ${{ github.workspace }}/build.zip
