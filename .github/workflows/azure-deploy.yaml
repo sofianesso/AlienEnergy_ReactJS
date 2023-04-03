@@ -33,5 +33,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: <alienenergy>
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_87857644FE5743E6A4F3842F50C517C9 }}
+          publish-profile: ${{ secrets.AZURE_HSS }}
           package: ${{ github.workspace }}/build.zip
