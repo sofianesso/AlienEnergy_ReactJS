@@ -33,7 +33,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: <alienenergy>
-          publish-profile: ${{ secrets.AZURE_HSS }}
-          username: ${{ secrets.AZURE_CRED_NAME }}
-          password: ${{ secrets.AZURE_CRED_PWD }}
+          publish-profile: ${{ secrets.AZURE_URL }}
+          username: ${{ secrets.AZURE_NAME }}
+          password: ${{ secrets.AZURE_PWD }}
           package: ${{ github.workspace }}/build.zip
