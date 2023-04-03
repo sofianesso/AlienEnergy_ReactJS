@@ -34,4 +34,6 @@ jobs:
         with:
           app-name: <alienenergy>
           publish-profile: ${{ secrets.AZURE_HSS }}
+          username: ${{ secrets.AZURE_CRED_NAME }}
+          password: ${{ secrets.AZURE_CRED_PWD }}
           package: ${{ github.workspace }}/build.zip
