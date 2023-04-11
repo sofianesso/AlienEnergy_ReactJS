@@ -1,47 +1,35 @@
-name: Test, Build, and Deploy
+name: Build and deploy .NET Core app to Azure App Service
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  test:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm install
-      - name: Run Tests
-        run: npm test
-  build:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Extract Build Artifacts
-        run: |
-          mkdir extracted-artifacts
-          unzip build.zip -d extracted-artifacts
-      - name: Install Dependencies
-        run: |
-          cd extracted-artifacts
-          npm install
-      - name: Build
-        run: |
-          cd extracted-artifacts
-          npm run build
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /path/to/remote/folder
-          local-dir: extracted-artifacts/build
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.103
+
+    - name: Restore NuGet packages
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Publish
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+
+    - name: Deploy to Azure App Service
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: <alienenergy>
+        slot-name: 'production'
+        publish-profile: ${{ secrets.FTP_SERVER }}
+        package: ${{env.DOTNET_ROOT}}/myapp
