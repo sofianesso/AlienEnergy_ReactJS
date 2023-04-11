@@ -1,28 +1,47 @@
-name: Build and Deploy
+name: Test, Build, and Deploy
 on:
   push:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Extract Artifacts
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Tests
+        run: npm test
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Extract Build Artifacts
         run: |
           mkdir extracted-artifacts
           unzip build.zip -d extracted-artifacts
-      - name: Build
+      - name: Install Dependencies
         run: |
           cd extracted-artifacts
           npm install
+      - name: Build
+        run: |
+          cd extracted-artifacts
           npm run build
-      - name: Deploy
-        uses: easingthemes/ftp-action@v1.0.5
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-folder: extracted-artifacts
-          remote-folder: /path/to/remote/folder
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /path/to/remote/folder
+          local-dir: extracted-artifacts/build
