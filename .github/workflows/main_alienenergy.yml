@@ -23,5 +23,7 @@ jobs:
       with:
         app-name: <alienenergy>
         slot-name: 'production'
-        publish-profile: ${{ secrets.FTP_SERVER }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_URL }}
+        username: ${{ secrets.AZURE_WEBAPP_USERNAME }}
+        password: ${{ secrets.AZURE_WEBAPP_PWD }}
         package: ./build.zip
