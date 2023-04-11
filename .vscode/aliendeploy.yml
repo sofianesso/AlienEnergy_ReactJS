@@ -1,0 +1,28 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Extract Artifacts
+        run: |
+          mkdir extracted-artifacts
+          unzip build.zip -d extracted-artifacts
+      - name: Build
+        run: |
+          cd extracted-artifacts
+          npm install
+          npm run build
+      - name: Deploy
+        uses: easingthemes/ftp-action@v1.0.5
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-folder: extracted-artifacts
+          remote-folder: /path/to/remote/folder
