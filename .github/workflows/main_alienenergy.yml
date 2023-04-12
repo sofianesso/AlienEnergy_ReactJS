@@ -1,4 +1,4 @@
-name: Build and deploy Node.js app to Azure Web App - alienenergy
+name: Build anD deploy Node.js app to Azure Web App - alienenergy
 
 on:
   push:
