@@ -23,13 +23,13 @@ jobs:
         run: |
           npm ci
           npm run build
-        working-directory: ./app
+        working-directory: .
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./app
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
