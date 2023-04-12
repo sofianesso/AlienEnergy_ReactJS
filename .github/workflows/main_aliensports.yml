@@ -24,10 +24,10 @@ jobs:
           npm run build
         working-directory: .
 
-      - name: Create artifact archive
-        run: |
-          zip -r node-app.zip .
-        working-directory: ${{ github.workspace }}
+- name: Create artifact archive
+  run: |
+    git archive -o node-app.zip HEAD
+  working-directory: ${{ github.workspace }}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
