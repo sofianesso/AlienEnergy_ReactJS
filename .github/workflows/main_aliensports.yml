@@ -45,27 +45,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: node-app
-      
-      - name: Configure web.config
-        run: |
-          echo '<?xml version="1.0" encoding="UTF-8"?>
-            <configuration>
-              <system.webServer>
-                <rewrite>
-                  <rules>
-                    <rule name="React" stopProcessing="true">
-                      <match url=".*" />
-                      <conditions logicalGrouping="MatchAll">
-                        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
-                      </conditions>
-                      <action type="Rewrite" url="index.html" />
-                    </rule>
-                  </rules>
-                </rewrite>
-              </system.webServer>
-            </configuration>' > web.config
-      
+          name: alienenergy-app
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
