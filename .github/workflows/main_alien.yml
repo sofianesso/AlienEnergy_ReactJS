@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v1
         with:
           node-version: '18.x'
 
@@ -27,14 +27,11 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
-      - name: Zip artifacts
-        run: zip -r artifacts.zip .
-
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./artifacts.zip
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -55,5 +52,5 @@ jobs:
         with:
           app-name: 'alien'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_26B52CBB77FE425592B9B15F1358E8BE }}
-          package: ${{ github.workspace }}/artifacts.zip
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CF8401A913E24FE9BD0B80C269B6FBDC }}
+          package: .
